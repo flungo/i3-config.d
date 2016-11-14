@@ -1,0 +1,9 @@
+# Ignore everything so that this can be used directly in ~/.config/i3
+# A minimal ignore would ignore config and config.d
+*
+
+# Unignore the files we care about
+!.gitignore
+!README.md
+!LICENSE.md
+!config-init
