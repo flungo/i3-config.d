@@ -4,7 +4,7 @@ A simple script that creates a `config.d` directory which will contain the i3 se
 
 ## How it works?
 
-Running the `config-init` script will search the `config.d` subdirectory of the i3 configration folder (typically `~/.config/i3/config.d`) for files and concattenate them together in lexilogical order into one configuration file stored in the standard i3 configuration location (typically `~/.config/i3/config`). The script can be run manually, or integrated as part of your `xinit` process (see [hooks](#hooks) to see how to integrate).
+Running the `config-init` script will search the `config.d` subdirectory of the i3 configration folder (typically `~/.config/i3/config.d`) for files ending `.conf` and concattenate them together in lexilogical order into one configuration file stored in the standard i3 configuration location (typically `~/.config/i3/config`). The script can be run manually, or integrated as part of your `xinit` process (see [hooks](#hooks) to see how to integrate).
 
 ## Installation
 
@@ -19,8 +19,8 @@ cd ~/.config
 mv i3 i3.bak
 git clone https://github.com/flungo/i3-config.d.git i3
 mkdir i3/config.d
-mv i3.bak/config i3/config.d/00-base
-rmdir i3.bak
+mv i3.bak/config i3/config.d/00-base.conf
+rmdir i3.bak # This will fail if you had any other files in your i3 folder.
 ```
 
 To make the `config-init` script part of your path, you will need to symbolically link to it from some directory that you have added to your path. It is recomended that you name the link `i3-config-init`. This step is not required, but will allow you to run `i3-config-init` from anywhere. If, for example, you had a directory `~/.local/bin` which was part of your path and you had installed into your i3 config directory, then you could run:

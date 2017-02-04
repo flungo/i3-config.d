@@ -17,4 +17,4 @@ if [ ! -d "${I3_CONFIG_D}" ]; then
 fi
 
 # Concattenate the inputs in lexilogical order and output
-cat "${I3_CONFIG_D}/"* > "${I3_CONFIG}"
+cat "${I3_CONFIG_D}"/*.conf > "${I3_CONFIG}"
