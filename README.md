@@ -50,3 +50,7 @@ Another place that you can hook this script into is within your i3 configuration
 bindsym $mod+Shift+c exec "~/.config/i3/config-init; i3-msg reload"
 bindsym $mod+Shift+r exec "~/.config/i3/config-init; i3-msg restart"
 ```
+
+## Example configurations
+
+Example configurations can be found as part of the [flungo/i3-config.d-configs](https://github.com/flungo/i3-config.d-configs) repository. This contains the configuration used by the developer of this utility and can be used for inspriation for your own configurations.
